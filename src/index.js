@@ -6,6 +6,8 @@ const cors = require("cors");
 
 
 const userManage = require("./routes/userManage");
+const adminManage = require("./routes/adminManage");
+
 
 app.use(express.static(__dirname + "/public"));
 
@@ -25,3 +27,4 @@ const server = app.listen(5000, function () {
 });
 
 app.use("/api/v1/user",userManage)
+app.use("/api/v1/admin",adminManage)
